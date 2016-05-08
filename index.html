@@ -21,22 +21,10 @@ layout: default
         <h1 class="page-heading">Hi there, I'm Reina.</h1>
         <h2 class="subtitle">Ship it in 14 is a project I started to challenge myself in design, as well as to learn coding. I will design and code various projects in 14 days. Take a look at a few of my projects below.</h2>
 
-          <div class="menuWrapper">
-            <div class="menu1"><p>Ship it in 14</p></div>
-            <div class="menu2"><h4>Ship it in 14 Project</h4>
-              <h5>Technology Used:</h5>
-              <ul>
-                <li>Design: Sketch, Adobe Photoshop</li>
-                <li>Code: jekyll, html/css, jquery</li>
-              </ul>
-              <p><a href="#" class="button button_primary">View Project</a></p>
-            </div>
-          </div>
 
-<div id="projectnav">
           <div class="menuWrapper">
-            <div class="menu1"><p>Sugared</p></div>
-            <div class="menu2"><h4>Ship it in 14 Project</h4>
+            <div class="lg-icon-menu" id="lg-icon-menu-1"><p>menu1</p></div>
+            <div class="description-popout" id="description-popout-1"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
               <ul>
                 <li>Design: Sketch, Adobe Photoshop</li>
@@ -47,8 +35,20 @@ layout: default
           </div>
 
           <div class="menuWrapper">
-            <div class="menu1"><p>Follow MyHealth Portal Redesign</p></div>
-            <div class="menu2"><h4>Ship it in 14 Project</h4>
+            <div class="lg-icon-menu" id="lg-icon-menu-2"><p>menu2</p></div>
+            <div class="description-popout hidden" id="description-popout-2"><h4>Ship it in 14 Project</h4>
+              <h5>Technology Used:</h5>
+              <ul>
+                <li>Design: Sketch, Adobe Photoshop</li>
+                <li>Code: jekyll, html/css, jquery</li>
+              </ul>
+              <p><a href="#" class="button button_primary">View Project</a></p>
+            </div>
+          </div>
+
+          <div class="menuWrapper">
+            <div class="lg-icon-menu" id="lg-icon-menu-3"><p>menu3</p></div>
+            <div class="description-popout hidden" id="description-popout-3"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
               <ul>
                 <li>Design: Sketch, Adobe Photoshop</li>
@@ -59,8 +59,8 @@ layout: default
         </div>
 
         <div class="menuWrapper">
-            <div class="menu1"><p>Filling the Gap Podcast Site</p></div>
-            <div class="menu2"><h4>Ship it in 14 Project</h4>
+            <div class="lg-icon-menu" id="lg-icon-menu-4"><p>menu4</p></div>
+            <div class="description-popout hidden" id="description-popout-4"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
               <ul>
                 <li>Design: Sketch, Adobe Photoshop</li>
@@ -69,7 +69,7 @@ layout: default
               <p><a href="#" class="button button_primary">View Project</a></p>
             </div>
           </div>
-        </div>
+
     </section>
 
 
@@ -81,7 +81,7 @@ layout: default
   </p>
   <div class="social">
     <ul>
-      <li><a href="#">Twillter</a></li>
+      <li><a href="#">Twitter</a></li>
       <li><a href="#">LinkedIn</a></li>
       <li><a href="#">Instagram</a></li>
       <li><a href="#">Github</a></li>
@@ -91,48 +91,8 @@ layout: default
 </section>
 
 
-  <script>
-
-  $('.menu1').mouseover(function(){
-      $('.menu2').show();
-  });
-
-  $('.menuWrapper').mouseleave(function(){
-      $('.menu2').hide();
-  });
-
-
-    console.log("JS CONNECTED");
-
-    $('.navhover').hide();
-
-    $('.navicon').mouseover(function(){
-      console.log("MOUSEOVER SHOW");
-      $('.navhover').show();
-  });
-
-  $('.navwrapper').mouseleave(function(){
-    console.log("MOUSEOVER HIDE");
-
-      $('.navhover').hide();
-  });
-  </script>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -149,3 +109,52 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+
+  <script>
+
+  console.log("JS CONNECTED");
+
+  $('#lg-icon-menu-1').mouseover(function(){
+    console.log("mouseover-1");
+      $('#description-popout-1').show();
+      $('#description-popout-2').hide();
+      $('#description-popout-3').hide();
+      $('#description-popout-4').hide();
+  });
+
+
+
+  $('#lg-icon-menu-2').mouseover(function(){
+    console.log("mouseover-2");
+      $('#description-popout-2').show();
+      $('#description-popout-3').hide();
+      $('#description-popout-4').hide();
+      $('#description-popout-1').hide();
+  });
+
+
+
+  $('#lg-icon-menu-3').mouseover(function(){
+    console.log("mouseover-3");
+      $('#description-popout-3').show();
+      $('#description-popout-1').hide();
+      $('#description-popout-2').hide();
+      $('#description-popout-4').hide();
+  });
+
+
+
+  $('#lg-icon-menu-4').mouseover(function(){
+    console.log("mouseover-4");
+      $('#description-popout-4').show();
+      $('#description-popout-1').hide();
+      $('#description-popout-2').hide();
+      $('#description-popout-3').hide();
+  });
+
+
+  </script>
+
+</body>
+
+</html>
