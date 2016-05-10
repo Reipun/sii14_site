@@ -21,8 +21,8 @@ layout: default
         <h1 class="page-heading">Hi there, I'm Reina.</h1>
         <h2 class="subtitle">Ship it in 14 is a project I started to challenge myself in design, as well as to learn coding. I will design and code various projects in 14 days. Take a look at a few of my projects below.</h2>
 
-
-          <div class="menuWrapper">
+  <ul id="nav">
+          <li class="menuWrapper" id="nav1">
             <div class="lg-icon-menu" id="lg-icon-menu-1"><p>menu1</p></div>
             <div class="description-popout" id="description-popout-1"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
@@ -31,10 +31,10 @@ layout: default
                 <li>Code: jekyll, html/css, jquery</li>
               </ul>
               <p><a href="#" class="button button_primary">View Project</a></p>
-            </div>
-          </div>
+            </li>
 
-          <div class="menuWrapper">
+
+          <li class="menuWrapper" id="nav2">
             <div class="lg-icon-menu" id="lg-icon-menu-2"><p>menu2</p></div>
             <div class="description-popout hidden" id="description-popout-2"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
@@ -43,10 +43,10 @@ layout: default
                 <li>Code: jekyll, html/css, jquery</li>
               </ul>
               <p><a href="#" class="button button_primary">View Project</a></p>
-            </div>
-          </div>
+            </li>
 
-          <div class="menuWrapper">
+
+          <li class="menuWrapper" id="nav3">
             <div class="lg-icon-menu" id="lg-icon-menu-3"><p>menu3</p></div>
             <div class="description-popout hidden" id="description-popout-3"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
@@ -55,10 +55,10 @@ layout: default
                 <li>Code: jekyll, html/css, jquery</li>
               </ul>
               <p><a href="#" class="button button_primary">View Project</a></p>
-            </div>
-        </div>
+            </li>
 
-        <div class="menuWrapper">
+
+        <li class="menuWrapper" id="nav4">
             <div class="lg-icon-menu" id="lg-icon-menu-4"><p>menu4</p></div>
             <div class="description-popout hidden" id="description-popout-4"><h4>Ship it in 14 Project</h4>
               <h5>Technology Used:</h5>
@@ -67,9 +67,9 @@ layout: default
                 <li>Code: jekyll, html/css, jquery</li>
               </ul>
               <p><a href="#" class="button button_primary">View Project</a></p>
-            </div>
-          </div>
+            </li>
 
+</ul>
     </section>
 
 
@@ -114,7 +114,7 @@ layout: default
 
   console.log("JS CONNECTED");
 
-  $('#lg-icon-menu-1').mouseover(function(){
+  $('#nav1').mouseover(function(){
     console.log("mouseover-1");
       $('#description-popout-1').show();
       $('#description-popout-2').hide();
@@ -124,7 +124,7 @@ layout: default
 
 
 
-  $('#lg-icon-menu-2').mouseover(function(){
+  $('#nav2').mouseover(function(){
     console.log("mouseover-2");
       $('#description-popout-2').show();
       $('#description-popout-3').hide();
@@ -134,7 +134,7 @@ layout: default
 
 
 
-  $('#lg-icon-menu-3').mouseover(function(){
+  $('#nav3').mouseover(function(){
     console.log("mouseover-3");
       $('#description-popout-3').show();
       $('#description-popout-1').hide();
@@ -144,7 +144,7 @@ layout: default
 
 
 
-  $('#lg-icon-menu-4').mouseover(function(){
+  $('#nav4').mouseover(function(){
     console.log("mouseover-4");
       $('#description-popout-4').show();
       $('#description-popout-1').hide();
